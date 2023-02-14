@@ -15,28 +15,33 @@
 //esta funcion me sirve para printear la lista que voy creando, el nodo anterior y el siguiente.
 //Gracias Sebas!!
 
-void print_list(t_node **a)
+void print_list(t_node **a, t_node **b)
 {
-	t_node *temp;
+	t_node *temp_a;
+	t_node *temp_b;
 	
-	temp = *a;
+	temp_a = *a;
+	temp_b = *b;
 
-	while(temp != NULL)
+	while(temp_a != NULL)
 	{
-		printf("Valor del nodo: %d || index:%d\n", temp->value, temp->index);
-		temp = temp->next;
+		printf("Valor de la lista A: %d || index:%d\n", temp_a->value, temp_a->index);
+		temp_a = temp_a->next;
 	}
-	temp = ft_last_list(a);
+	temp_a = ft_last_list(a);
 	printf("--------Prev--------\n");
-	while(temp != NULL)
+	while(temp_a != NULL)
 	{
-		printf("Valor del nodo: %d || index: %d || length: %d\n", temp->value, temp->index, temp->length_list);
-		temp = temp->prev;
+		printf("Valor de la lista A del reves: %d || index: %d || length: %d\n", temp_a->value, temp_a->index, temp_a->length_list);
+		temp_a = temp_a->prev;
 	}
+	printf("----------------------\n");
+
 }
 int	main(int ac, char **av)
 {
 	t_node *a = NULL;
+	t_node *b = NULL;
 
 	if(ac < 2)
 		exit(0);
@@ -44,7 +49,11 @@ int	main(int ac, char **av)
 	{
 		checking_error(av, ac);
 		a = create_list(av);
-		print_list(&a);
+		b = create_list(av);
+		print_list(&a, &b);
+		ft_push(&a, &b);
+		print_list(&a, &b);
+		//print_list(&b);
 	}
 	return(0);
 }

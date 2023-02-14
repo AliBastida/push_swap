@@ -37,7 +37,7 @@ void	check_double(char **argv, int argc)
 		j = i + 1;
 		while (argv[j])
 		{
-			if(ft_strncmp(argv[i], argv[j], 11) == 0)
+			if(ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				ft_error(1);
 			else
 				j++;
@@ -64,12 +64,12 @@ void	checking_error(char **argv, int argc)
 	int i;
 
 	i = 0;
-	check_double(argv, argc);
-	while (argv[++i])
+		while (argv[++i])
 	{
 		check_num(argv[i]);
 		check_num_max_min(argv);
 		check_if_ordered(argv);
 	}
+	check_double(argv, argc);
 }
 

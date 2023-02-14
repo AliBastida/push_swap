@@ -22,7 +22,7 @@ static void	put_index(t_node **list, int i)
 	while(first)
 	{
 		moving_to_compare = *list;
-		index = 0;
+		index = 1;
 		while(moving_to_compare)
 		{
 			if(first->value > moving_to_compare->value)

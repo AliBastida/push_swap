@@ -37,6 +37,14 @@ t_node *ft_last_list(t_node **a);
 //init.c//
 t_node	*create_list(char **av);
 
+//swap_movements.c//
+void	ft_swap(t_node **list);
+void	ft_push(t_node **list_a, t_node **list_b);
+
+//print_movements//
+void	print_s(t_node **list, char c);
+void	prit_sa_sb(t_node **list_a, t_node **list_b);
+
 //check_errors.c//
 
 void	ft_error(int n);
