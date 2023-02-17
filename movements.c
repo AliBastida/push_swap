@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_movements.c                                   :+:      :+:    :+:   */
+/*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
+/*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 10:13:55 by abastida          #+#    #+#             */
-/*   Updated: 2023/02/14 10:13:55 by abastida         ###   ########.fr       */
+/*   Updated: 2023/02/17 17:50:34 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,26 +34,27 @@ void	ft_swap(t_node **list)
 	*list = second_node;
 }
 
-void	ft_push(t_node **list_a, t_node **list_b)
+void	ft_push(t_node **to, t_node **from)
 {
-	t_node *first_a;
-	t_node *first_b;
+	t_node *from_first;
+	t_node *to_first;
 
-	first_a = *list_a;
-	first_b = *list_b;
-	if(first_b == NULL)
+	from_first = *from;
+	to_first = *to;
+	if(from == NULL)
 		return;
-	if(first_a->next && first_b)
+	if(from_first)
 	{
-		if(first_b->next == NULL)
-			list_b = NULL;
+		if(from_first->next == NULL)
+			*from = NULL;
 		else
-			first_b->next = first_a;
-		first_a->prev = first_b;
-		first_b->next = first_a;
-		first_a = first_a->next;
-		first_b->prev = NULL;
-		first_b->next->prev = NULL;
-	}
-	*list_a = first_b;
+		{
+			from_first->next->prev = NULL;
+			*from = from_first->next;
+		}
+		to_first->prev = from_first;
+		from_first->next = to_first;
+		from_first->prev = NULL;
+		*to = from_first;
+	}	
 }
