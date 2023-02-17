@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:28:56 by abastida          #+#    #+#             */
-/*   Updated: 2023/02/17 17:47:47 by abastida         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:46:00 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ int	main(int ac, char **av)
 	t_node *a = NULL;
 	t_node *b = NULL;
 
-
 	if(ac < 2)
 		exit(0);
 	else
@@ -65,7 +64,8 @@ int	main(int ac, char **av)
 		a = create_list(av);
 		b = create_list(av);
 		//print_list(&a, &b);
-		ft_swap(&a);
+		//ft_swap(&a);
+		//print_push(&b, &a, 'b');
 		print_list(&a, &b);
 	}
 	return(0);

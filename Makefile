@@ -6,16 +6,16 @@
 #    By: abastida <abastida@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 12:54:42 by abastida          #+#    #+#              #
-#    Updated: 2023/01/09 13:59:56 by abastida         ###   ########.fr        #
+#    Updated: 2023/02/17 18:31:30 by abastida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := push_swap
-SRC := push_swap.c list_utils.c init.c check_errors.c check_num.c swap_movements.c print_movements.c
+SRC := push_swap.c list_utils.c init.c check_errors.c check_num.c movements.c print_movements.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc
-CFLAGS := -g3 -Wall -Werror -Wextra -g -MMD -I inc/
+CFLAGS := -Wall -Werror -Wextra -g -MMD -I inc/
 RM := rm -rf
 LIBS := libftprintf/libftprintf.a 
 LIBPATH := -L libftprintf -lftprintf
