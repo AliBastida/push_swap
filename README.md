@@ -18,6 +18,7 @@ Checker takes the same input array as push_swap and reads in the series of instr
 
 The Push Swap project is designed to challenge students to think creatively about how to solve a complex problem with limited resources. It requires an understanding of data structures, algorithms, and the constraints of the problem, as well as the ability to write clean, efficient code.
 #
+![alt text](/path/to/img.jpg)
 https://iconos8.es/icon/jFQEmyVlPtc4/aprendizaje
 **What I have learned**
 - About sorting algorithms.
