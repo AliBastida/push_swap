@@ -21,7 +21,7 @@ The Push Swap project is designed to challenge students to think creatively abou
 ![alt text](icons8-aprendizaje-48.png)
 
 **What I have learned**
-- About sorting algorithms.
-- About dynamic data structures.
+- Sorting algorithms.
+- Dynamic data structures.
 
 #
