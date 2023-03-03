@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:01:07 by abastida          #+#    #+#             */
-/*   Updated: 2023/02/12 10:59:11 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/03 10:37:08 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,14 @@ t_node	*create_list(char **av);
 //swap_movements.c//
 void	ft_swap(t_node **list);
 void	ft_push(t_node **list_a, t_node **list_b);
+void	ft_rotate(t_node **list);
 
 //print_movements//
 void	print_s(t_node **list, char c);
-void	prit_sa_sb(t_node **list_a, t_node **list_b);
+void	print_sa_sb(t_node **list_a, t_node **list_b);
+void	print_push(t_node **to, t_node ** from, char c);
+void	print_r(t_node **list, char c);
+void	print_rr(t_node **list_a, t_node **list_b);
 
 //check_errors.c//
 
