@@ -6,12 +6,12 @@
 #    By: abastida <abastida@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 12:54:42 by abastida          #+#    #+#              #
-#    Updated: 2023/02/17 18:31:30 by abastida         ###   ########.fr        #
+#    Updated: 2023/03/03 12:26:40 by abastida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := push_swap
-SRC := push_swap.c list_utils.c init.c check_errors.c check_num.c movements.c print_movements.c
+SRC := push_swap.c list_utils.c init.c check_errors.c check_num.c movements.c print_movements.c print_movements_continue.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc

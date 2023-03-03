@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 10:13:55 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/03 10:50:09 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:41:49 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,18 @@ void	ft_rotate(t_node **list)
 	first->next = NULL;
 	first->prev = last;
 
+}
+
+void	ft_rrotate(t_node **list)
+{
+	t_node *first;
+	t_node *last;
+
+	first = *list;
+	last = ft_last_list(&first);
+	last->prev->next = NULL;
+	first->prev = last;
+	*list = last;
+	last->next = first;
+	last->prev = NULL;
 }
