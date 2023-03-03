@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:01:07 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/03 12:36:33 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:50:42 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void	print_r(t_node **list, char c);
 void	print_reverse_both(t_node **list_a, t_node **list_b);
 
 //print_movements_continue//
-void print_rr(t_node **list, char c);
+void	print_rr(t_node **list, char c);
+void	print_rrotate_both(t_node **list_a, t_node **list_b);
 
 //check_errors.c//
 

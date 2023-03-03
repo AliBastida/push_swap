@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:28:56 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/03 12:46:28 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/03 14:16:00 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void print_list(t_node **a, t_node **b)
 	}
 	printf("----------------------\n");
 }
+
 int	main(int ac, char **av)
 {
 	t_node *a = NULL;
@@ -67,8 +68,8 @@ int	main(int ac, char **av)
 		//ft_swap(&a);
 		//print_push(&b, &a, 'b');
 		print_list(&a, &b);
-		ft_rrotate(&a);
-		//print_r(&b, 'b');
+		//ft_rrotate(&b);
+		print_rr(&b, 'b');
 		print_list(&a, &b);
 	}
 	return(0);
