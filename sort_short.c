@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:21:38 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/04 13:23:14 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:27:09 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,19 @@ int	find_max_index(t_node **list)
 	}
 	tmp = tmp->next;
 	return(0);
+}
+
+void if_is_two(t_node **list)
+{
+	t_node *new;
+
+	new = *list;
+	if(new->index > new->next->index)
+		print_s(list, 'a');
+}
+
+void if_is_three(t_node **list)
+{
+
+
 }

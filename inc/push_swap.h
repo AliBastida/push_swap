@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:01:07 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/03 18:20:44 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:19:29 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	print_rrotate_both(t_node **list_a, t_node **list_b);
 //sort_short.c//
 int	find_min_index(t_node **list);
 int	find_max_index(t_node **list);
+void	if_is_two(t_node **list);
 //check_errors.c//
 
 void	ft_error(int n);
