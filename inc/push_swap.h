@@ -33,6 +33,7 @@ int main(int ac, char **av);
 t_node *create_node(char **av);
 void	add_back(t_node *elem, t_node **a);
 t_node *ft_last_list(t_node **a);
+int	is_ordered(t_node **list);
 
 //init.c//
 t_node	*create_list(char **av);
@@ -58,6 +59,7 @@ void	print_rrotate_both(t_node **list_a, t_node **list_b);
 int	find_min_index(t_node **list);
 int	find_max_index(t_node **list);
 void	if_is_two(t_node **list);
+void	if_is_three(t_node **list);
 //check_errors.c//
 
 void	ft_error(int n);

@@ -50,3 +50,17 @@ void	add_back(t_node *new, t_node **a)
 		new->prev = temp_node;
 	}
 }
+
+int	is_ordered(t_node **list)
+{
+	t_node *tmp;
+
+	tmp = *list;
+	while(tmp->next)
+	{
+		if(tmp->index > tmp->next->index)
+			return(0);
+		tmp = tmp->next;
+	}
+	return(1);
+}

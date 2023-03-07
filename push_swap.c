@@ -66,6 +66,8 @@ int	main(int ac, char **av)
 		b = create_list(av);
 		if(ac == 3)
 			if_is_two(&a);
+		if(ac == 4)
+			if_is_three(&a);
 		print_list(&a, &b);
 		//ft_swap(&a);
 		//print_push(&b, &a, 'b');
