@@ -36,7 +36,7 @@ int	find_max_index(t_node **list)
 	tmp = *list;
 	n = tmp->length_list;
 	if(tmp->index == n)
-		return(tmp->value);
+		return(tmp->index);
 	tmp = tmp->next;
 	return(0);
 }
@@ -57,12 +57,12 @@ void if_is_three(t_node **list)
 	int min;
 	int max;
 
-	tmp = *list;
 	last = ft_last_list(list);
 	min = find_min_index(list);
 	max = find_max_index(list);
 	while(is_ordered(list) == 0)
 	{
+		tmp = *list;
 		if(tmp->index == max && tmp->next->index == min)
 			print_r(list, 'a');
 		else if(last->index == min && last->prev->index == max)
