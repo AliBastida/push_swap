@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_short.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:21:38 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/06 18:27:09 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/09 11:34:47 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	find_max_index(t_node **list)
 	if(tmp->index == n)
 		return(tmp->index);
 	tmp = tmp->next;
-	return(0);
+	return(tmp->index);
 }
 
 void if_is_two(t_node **list)
@@ -57,15 +57,18 @@ void if_is_three(t_node **list)
 	int min;
 	int max;
 
-	last = ft_last_list(list);
+	//last = ft_last_list(list);
 	min = find_min_index(list);
+	printf("min:%d\n", min);
 	max = find_max_index(list);
-	while(is_ordered(list) == 0)
+	printf("max:%d\n", max);
+	while(!is_ordered(list))
 	{
 		tmp = *list;
+		last = ft_last_list(list);
 		if(tmp->index == max && tmp->next->index == min)
 			print_r(list, 'a');
-		else if(last->index == min && last->prev->index == max)
+		else if(last->index == min && tmp->next->index == max)
 			print_rr(list, 'a');
 		else
 			print_s(list, 'a');
