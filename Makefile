@@ -13,7 +13,8 @@
 NAME := push_swap
 SRC := push_swap.c list_utils.c init.c check_errors.c \
 	   check_num.c movements.c print_movements.c \
-	   print_movements_continue.c sort_short.c
+	   print_movements_continue.c sort_short.c \
+	   sort_utils.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc

@@ -58,8 +58,9 @@ void	print_rrotate_both(t_node **list_a, t_node **list_b);
 //sort_short.c//
 int	find_min_index(t_node **list);
 int	find_max_index(t_node **list);
-void	if_is_two(t_node **list);
-void	if_is_three(t_node **list);
+void	if_two(t_node **list);
+void	if_three(t_node **list);
+
 //check_errors.c//
 
 void	ft_error(int n);

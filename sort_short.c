@@ -41,7 +41,7 @@ int	find_max_index(t_node **list)
 	return(tmp->index);
 }
 
-void if_is_two(t_node **list)
+void if_two(t_node **list)
 {
 	t_node *new;
 
@@ -50,7 +50,7 @@ void if_is_two(t_node **list)
 		print_s(list, 'a');
 }
 
-void if_is_three(t_node **list)
+void if_three(t_node **list)
 {
 	t_node *tmp;
 	t_node *last;
