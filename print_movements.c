@@ -55,16 +55,16 @@ void  print_sa_sb(t_node **list_a, t_node **list_b)
 	ft_printf("ss\n");
 }
 
-void	print_push(t_node **to, t_node **from, char c)
+void	print_push(t_node **from, t_node **to, char c)
 {
 	if(c == 'a')
 	{
-		ft_push(to, from);
+		ft_push(from, to);
 		ft_printf("pa\n");
 	}
 	if(c == 'b')
 	{
-		ft_push(to, from);
+		ft_push(from, to);
 		ft_printf("pb\n");
 	}
 }

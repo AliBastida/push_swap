@@ -54,8 +54,8 @@ void print_list(t_node **a, t_node **b)
 
 int	main(int ac, char **av)
 {
-	t_node *a = NULL;
-	t_node *b = NULL;
+	t_node *a;
+	t_node *b;
 
 	if(ac < 2)
 		exit(0);
@@ -63,11 +63,13 @@ int	main(int ac, char **av)
 	{
 		checking_error(av, ac);
 		a = create_list(av);
-		b = create_list(av);
+		b = NULL;
 		if(ac == 3)
-			if_is_two(&a);
+			if_two(&a);
 		if(ac == 4)
-			if_is_three(&a);
+			if_three(&a);
+		if(ac > 4 && ac <= 6)
+			if_five(&a, &b);
 		print_list(&a, &b);
 		//ft_swap(&a);
 		//print_push(&b, &a, 'b');

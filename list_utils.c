@@ -64,3 +64,23 @@ int	is_ordered(t_node **list)
 	}
 	return(1);
 }
+
+int	find_position(t_node **list)
+{
+	int i;
+	t_node *tmp;
+
+	i = 0;
+	tmp = *list;
+	while(tmp)
+	{
+		if(find_min_index(list) == tmp->index )
+			return(i);
+		i++;
+		tmp = tmp->next;
+	}
+	return(0);
+}
+
+
+

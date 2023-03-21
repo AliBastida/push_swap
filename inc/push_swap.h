@@ -34,6 +34,10 @@ t_node *create_node(char **av);
 void	add_back(t_node *elem, t_node **a);
 t_node *ft_last_list(t_node **a);
 int	is_ordered(t_node **list);
+int	find_position(t_node **list);
+
+//sort_utils.c//
+
 
 //init.c//
 t_node	*create_list(char **av);
@@ -47,7 +51,7 @@ void	ft_rrotate(t_node **list);
 //print_movements//
 void	print_s(t_node **list, char c);
 void	print_sa_sb(t_node **list_a, t_node **list_b);
-void	print_push(t_node **to, t_node ** from, char c);
+void	print_push(t_node **from, t_node **to, char c);
 void	print_r(t_node **list, char c);
 void	print_reverse_both(t_node **list_a, t_node **list_b);
 
@@ -60,6 +64,7 @@ int	find_min_index(t_node **list);
 int	find_max_index(t_node **list);
 void	if_two(t_node **list);
 void	if_three(t_node **list);
+void	if_five(t_node **list_a, t_node **list_b);
 
 //check_errors.c//
 

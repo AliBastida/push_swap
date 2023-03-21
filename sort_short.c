@@ -75,3 +75,16 @@ void if_three(t_node **list)
 	}
 }
 
+void	if_five(t_node **list_a, t_node **list_b)
+{
+	t_node *tmp;
+	int min;
+
+	tmp = *list_a;;
+	min = 0;
+	if(tmp)
+	{
+		min = find_position(list_a);
+		printf("min = %d\n", min);
+	}
+}

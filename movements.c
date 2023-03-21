@@ -34,7 +34,7 @@ void	ft_swap(t_node **list)
 	*list = second_node;
 }
 
-void	ft_push(t_node **to, t_node **from)
+void	ft_push(t_node **from, t_node **to)
 {
 	t_node *from_first;
 	t_node *to_first;
@@ -52,7 +52,8 @@ void	ft_push(t_node **to, t_node **from)
 			from_first->next->prev = NULL;
 			*from = from_first->next;
 		}
-		to_first->prev = from_first;
+		if(to_first != NULL)
+			to_first->prev = from_first;
 		from_first->next = to_first;
 		from_first->prev = NULL;
 		*to = from_first;
