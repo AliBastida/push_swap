@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:21:38 by abastida          #+#    #+#             */
-/*   Updated: 2023/03/09 11:34:47 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/22 13:01:11 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,28 @@ void if_three(t_node **list)
 void	if_five(t_node **list_a, t_node **list_b)
 {
 	t_node *tmp;
-	int min;
+	int pos;
+	int half_length;
+	int times_rr;
+	(void) list_b;
 
 	tmp = *list_a;;
-	min = 0;
+	pos = find_position(list_a);
+	half_length = tmp->length_list/2;
+	times_rr = tmp->length_list - pos;
 	if(tmp)
 	{
-		min = find_position(list_a);
-		printf("min = %d\n", min);
+		//pos = find_position(list_a);
+		if(pos > half_length && times_rr != 0)
+		{
+			print_rr(list_a, 'a');
+			times_rr--;
+		}
+		else if(pos <= half_length && times_rr != 0)
+		{
+			print_r(list_a, 'a');
+			times_rr--;
+		}
+		printf("pos = %d\n", pos);
 	}
 }
