@@ -31,7 +31,7 @@ t_node	*ft_last_list(t_node **a)
 {
 	t_node *last;
 	last = *a;
-	while(last->next != NULL)
+	while(last && last->next != NULL)
 		last = last->next;
 	return(last);
 }

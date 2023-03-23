@@ -35,10 +35,13 @@ int	find_max_index(t_node **list)
 	
 	tmp = *list;
 	n = tmp->length_list;
-	if(tmp->index == n)
-		return(tmp->index);
-	tmp = tmp->next;
-	return(tmp->index);
+	while(tmp)
+	{
+		if(n < tmp->index)
+			n = tmp->index;
+		tmp = tmp->next;
+	}
+	return(n);
 }
 
 void if_two(t_node **list)
@@ -59,9 +62,7 @@ void if_three(t_node **list)
 
 	//last = ft_last_list(list);
 	min = find_min_index(list);
-	printf("min:%d\n", min);
 	max = find_max_index(list);
-	printf("max:%d\n", max);
 	while(!is_ordered(list))
 	{
 		tmp = *list;
@@ -78,28 +79,17 @@ void if_three(t_node **list)
 void	if_five(t_node **list_a, t_node **list_b)
 {
 	t_node *tmp;
-	int pos;
-	int half_length;
-	int times_rr;
-	(void) list_b;
 
 	tmp = *list_a;;
-	pos = find_position(list_a);
-	half_length = tmp->length_list/2;
-	times_rr = tmp->length_list - pos;
-	if(tmp)
+	while(new_length_list(list_a) > 3)
 	{
-		//pos = find_position(list_a);
-		if(pos > half_length && times_rr != 0)
-		{
-			print_rr(list_a, 'a');
-			times_rr--;
-		}
-		else if(pos <= half_length && times_rr != 0)
-		{
-			print_r(list_a, 'a');
-			times_rr--;
-		}
-		printf("pos = %d\n", pos);
+		find_and_move_min(list_a, list_b);
+	}
+	if_three(list_a);
+	print_list(list_a, list_b);
+	while(new_length_list(list_b) != 0)
+	{
+		printf()
+		print_push(list_b, list_a, 'a');
 	}
 }

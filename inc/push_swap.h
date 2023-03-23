@@ -28,6 +28,7 @@ typedef struct s_node
 
 //push_swap.c//
 int main(int ac, char **av);
+void	print_list(t_node **a, t_node **b);
 
 //list_utils.c//
 t_node *create_node(char **av);
@@ -37,7 +38,8 @@ int	is_ordered(t_node **list);
 int	find_position(t_node **list);
 
 //sort_utils.c//
-
+void	find_and_move_min(t_node **list_a, t_node **list_b);
+int		new_length_list(t_node **list);
 
 //init.c//
 t_node	*create_list(char **av);
