@@ -88,8 +88,5 @@ void	if_five(t_node **list_a, t_node **list_b)
 	if_three(list_a);
 	print_list(list_a, list_b);
 	while(new_length_list(list_b) != 0)
-	{
-		printf()
 		print_push(list_b, list_a, 'a');
-	}
 }
