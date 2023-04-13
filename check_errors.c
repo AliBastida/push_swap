@@ -27,8 +27,8 @@ void	ft_error(int n)
 
 void	check_double(char **argv, int argc)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	j = i + 1;
@@ -37,7 +37,7 @@ void	check_double(char **argv, int argc)
 		j = i + 1;
 		while (argv[j])
 		{
-			if(ft_atoi(argv[i]) == ft_atoi(argv[j]))
+			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				ft_error(1);
 			else
 				j++;
@@ -48,10 +48,10 @@ void	check_double(char **argv, int argc)
 
 void	check_if_ordered(char **av)
 {
-	int i;
+	int	i;
 
 	i = 1;
-	while ((av[i]) && (ft_atoi(av[i-1]) < ft_atoi(av[i])))
+	while ((av[i]) && (ft_atoi(av[i - 1]) < ft_atoi(av[i])))
 	{
 		i++;
 	}
@@ -61,10 +61,10 @@ void	check_if_ordered(char **av)
 
 void	checking_error(char **argv, int argc)
 {
-	int i;
+	int	i;
 
 	i = 0;
-		while (argv[++i])
+	while (argv[++i])
 	{
 		check_num(argv[i]);
 		check_num_max_min(argv);
@@ -72,4 +72,3 @@ void	checking_error(char **argv, int argc)
 	}
 	check_double(argv, argc);
 }
-

@@ -14,40 +14,39 @@
 
 static void	put_index(t_node **list, int i)
 {
-	t_node *first;
-	t_node *moving_to_compare;
-	int index;
+	t_node	*first;
+	t_node	*moving_to_compare;
+	int		index;
 
 	first = *list;
-	while(first)
+	while (first)
 	{
 		moving_to_compare = *list;
 		index = 1;
-		while(moving_to_compare)
+		while (moving_to_compare)
 		{
-			if(first->value > moving_to_compare->value)
+			if (first->value > moving_to_compare->value)
 				index++;
 			moving_to_compare = moving_to_compare->next;
 		}
 		first->length_list = i - 1;
 		first->index = index;
 		first = first->next;
-
 	}
 }
 
-t_node *create_list(char **av)
+t_node	*create_list(char **av)
 {
-	int i;
-	t_node *elem;
-	t_node *list;
-	
+	int		i;
+	t_node	*elem;
+	t_node	*list;
+
 	elem = create_node(&av[1]);
 	i = 2;
-	while(av[i])
+	while (av[i])
 	{
 		list = create_node(&av[i]);
-		if(!list)
+		if (!list)
 		{
 			free(elem);
 			exit(1);
@@ -56,5 +55,5 @@ t_node *create_list(char **av)
 		i++;
 	}
 	put_index(&elem, i);
-	return(elem);
+	return (elem);
 }

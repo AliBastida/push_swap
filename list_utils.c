@@ -14,34 +14,35 @@
 
 t_node	*create_node(char **av)
 {
-	int i;
-	t_node *temp;
+	int		i;
+	t_node	*temp;
 
 	i = 0;
 	temp = (t_node *)malloc(sizeof(t_node));
-	if(!temp)
-		return(NULL);
+	if (!temp)
+		return (NULL);
 	temp->value = ft_atoi(av[i]);
 	temp->next = NULL;
 	temp->prev = NULL;
-	return(temp);
+	return (temp);
 }
 
 t_node	*ft_last_list(t_node **a)
 {
-	t_node *last;
+	t_node	*last;
+
 	last = *a;
-	while(last && last->next != NULL)
+	while (last && last->next != NULL)
 		last = last->next;
-	return(last);
+	return (last);
 }
 
 void	add_back(t_node *new, t_node **a)
 {
-	t_node *temp_node;
+	t_node	*temp_node;
 
 	temp_node = *a;
-	if(*a == NULL)
+	if (*a == NULL)
 		*a = new;
 	else
 	{
@@ -53,34 +54,31 @@ void	add_back(t_node *new, t_node **a)
 
 int	is_ordered(t_node **list)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = *list;
-	while(tmp->next)
+	while (tmp->next)
 	{
-		if(tmp->index > tmp->next->index)
-			return(0);
+		if (tmp->index > tmp->next->index)
+			return (0);
 		tmp = tmp->next;
 	}
-	return(1);
+	return (1);
 }
 
 int	find_position(t_node **list)
 {
-	int i;
-	t_node *tmp;
+	int		i;
+	t_node	*tmp;
 
 	i = 0;
 	tmp = *list;
-	while(tmp)
+	while (tmp)
 	{
-		if(find_min_index(list) == tmp->index )
-			return(i);
+		if (find_min_index (list) == tmp->index)
+			return (i);
 		i++;
 		tmp = tmp->next;
 	}
-	return(0);
+	return (0);
 }
-
-
-

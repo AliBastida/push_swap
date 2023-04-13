@@ -41,6 +41,8 @@ void	order_by_chunks(t_node **list_a, t_node **list_b, int size_chunk)
 			i++;
 		}
 		print_push(list_a, list_b, 'b');
+		if ((*list_b)->index > chunk - size_chunk/2 && new_length_list(list_b) != 1)
+			print_r(list_b, 'b');
 	}
 }
 

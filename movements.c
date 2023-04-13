@@ -66,6 +66,8 @@ void	ft_rotate(t_node **list)
 	t_node *last;
 
 	first = *list;
+	if(first->next == NULL)
+		return ;
 	last = ft_last_list(&first);
 	*list = first->next;
 	first->next->prev = NULL;
