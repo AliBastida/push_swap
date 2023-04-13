@@ -70,18 +70,12 @@ int	main(int ac, char **av)
 			if_three(&a);
 		if(ac > 4 && ac <= 6)
 			if_five(&a, &b);
+		if(ac > 7 && ac <= 101)
+			if_hundred(&a, &b);
+		if(ac >= 102)
+			if_5hundred(&a, &b);
 		print_list(&a, &b);
-		//ft_swap(&a);
-		//print_push(&b, &a, 'b');
-		//print_list(&a, &b);
-		//printf("entra1\n");
-		//find_min_index(&a);
-		//printf("entra2\n");
-		//find_max_index(&a);
-		//printf("entra3\n");
-		//ft_rotate(&b);
-		//print_rr(&b, 'b');
-		//print_list(&a, &b);
+		ft_printf("%d\n", is_ordered(&a));
 	}
 	return(0);
 }

@@ -60,7 +60,6 @@ void if_three(t_node **list)
 	int min;
 	int max;
 
-	//last = ft_last_list(list);
 	min = find_min_index(list);
 	max = find_max_index(list);
 	while(!is_ordered(list))

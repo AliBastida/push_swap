@@ -80,5 +80,10 @@ void	checking_error(char **argv, int argc);
 void	check_num(char *s);
 void	check_num_max_min(char **av);
 
+//sort_big.c//
+
+void	order_by_chunks(t_node **list_a, t_node **list_b, int size_chunk);
+void	if_hundred(t_node **list_a, t_node **list_b);
+void	if_5hundred(t_node **list_a, t_node **list_b);
 
 #endif
