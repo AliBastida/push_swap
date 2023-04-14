@@ -31,7 +31,7 @@ INCLUDE := -I libftprintf -I $(HEADER)
 all: make_libs $(NAME)
 
 -include $(DEP)
-$(NAME): $(LIBS) $(OBJ) Makefile
+$(NAME): $(LIBS) $(OBJ) Makefile 
 	$(CC) $(CFLAGS) $(LIBPATH) $(OBJ) -o $(NAME)
 
 make_libs:

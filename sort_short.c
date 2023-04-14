@@ -34,7 +34,7 @@ int	find_max_index(t_node **list)
 	int n;
 	
 	tmp = *list;
-	n = tmp->length_list;
+	n = 1;
 	while(tmp)
 	{
 		if(n < tmp->index)

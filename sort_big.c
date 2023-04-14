@@ -63,7 +63,7 @@ static int	find_index_chunk(t_node **list_a,  int chunk)
 	return(-1);
 }
 
-static int	find_biggest_num(t_node **list_b)
+int	find_biggest_num(t_node **list_b)
 {
 	t_node *tmp;
 	int pos;
@@ -72,7 +72,7 @@ static int	find_biggest_num(t_node **list_b)
 	pos = 0;
 	while(*list_b)
 	{
-		if(tmp->index == new_length_list(list_b))
+		if(tmp->index == find_max_index(list_b))
 			return(pos);
 		pos++;
 		tmp = tmp->next;
@@ -91,16 +91,15 @@ void	if_hundred(t_node **list_a, t_node **list_b)
 		pos = find_biggest_num(list_b);
 		length = new_length_list(list_b)/2;
 		while(pos <= length && pos != 0)
-		{
-			print_r(list_b, 'b');
-			pos--;
-		}
+			sort_upper_half(list_a, list_b);
 		while(pos > length && pos != new_length_list(list_b))
 		{
 			print_rr(list_b, 'b');
 			pos++;
 		}
 		print_push(list_b, list_a, 'a');
+		if((*list_a)->next && (*list_a)->index > (*list_a)->next->index)
+			print_s(list_a, 'a');
 	}
 }
 
@@ -109,7 +108,7 @@ void	if_5hundred(t_node **list_a, t_node **list_b)
 	int pos;
 	int length;
 
-	order_by_chunks(list_a, list_b, new_length_list(list_a)/20);
+	order_by_chunks(list_a, list_b, new_length_list(list_a)/8);
 	while(*list_b)
 	{
 		pos = find_biggest_num(list_b);
