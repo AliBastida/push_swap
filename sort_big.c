@@ -91,9 +91,16 @@ void	if_hundred(t_node **list_a, t_node **list_b)
 		pos = find_biggest_num(list_b);
 		length = new_length_list(list_b)/2;
 		while(pos <= length && pos != 0)
-			sort_upper_half(list_a, list_b);
-		while(pos > length && pos != new_length_list(list_b))
 		{
+			sort_upper_half(list_a, list_b);
+			pos--;
+		}
+		while(pos > length && (*list_b)->index != find_max_index(list_b))
+		{
+			if((*list_b)->index == find_max_index(list_b) - 1)
+			{
+				print_push(list_b, list_a, 'a');
+			}
 			print_rr(list_b, 'b');
 			pos++;
 		}
@@ -115,7 +122,7 @@ void	if_5hundred(t_node **list_a, t_node **list_b)
 		length = new_length_list(list_b)/2;
 		while(pos <= length && pos != 0)
 		{
-			print_r(list_b, 'b');
+			sort_upper_half(list_a, list_b);
 			pos--;
 		}
 		while(pos > length && pos != new_length_list(list_b))
