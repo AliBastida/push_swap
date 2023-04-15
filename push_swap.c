@@ -71,9 +71,9 @@ int	main(int ac, char **av)
 		if(ac > 4 && ac <= 6)
 			if_five(&a, &b);
 		if(ac > 7 && ac <= 101)
-			if_hundred(&a, &b);
+			if_hundred(&a, &b, 5);
 		if(ac >= 102)
-			if_5hundred(&a, &b);
+			if_hundred(&a, &b, 8);
 		//print_list(&a, &b);
 		//ft_printf("%d\n", is_ordered(&a));
 	}

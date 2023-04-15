@@ -41,6 +41,8 @@ int	find_position(t_node **list);
 void	find_and_move_min(t_node **list_a, t_node **list_b);
 int		new_length_list(t_node **list);
 void	sort_upper_half(t_node **list_a, t_node **list_b);
+void	sort_lower_half(t_node **list_a, t_node **list_b);
+void	final_sort(t_node **list_a);
 
 //init.c//
 t_node	*create_list(char **av);
@@ -85,7 +87,7 @@ void	check_num_max_min(char **av);
 
 void	order_by_chunks(t_node **list_a, t_node **list_b, int size_chunk);
 int		find_biggest_num(t_node **list_b);
-void	if_hundred(t_node **list_a, t_node **list_b);
-void	if_5hundred(t_node **list_a, t_node **list_b);
+void	if_hundred(t_node **list_a, t_node **list_b, int n);
+
 
 #endif

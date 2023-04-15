@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 static int	find_index_chunk(t_node **list_a, int chunk);
-
+/*en esta funcion calculo el limite sup de los chunks y voy buscando los numeros que pertencen al chunk. Luego actualizo el valor del chunk y vuelvo a buscar los numeros y asi hasta haber pasado al stack b los numeros ordenados por chunks.Con la ultima linea lo que hago es pasar el numero a la mitad inferior si el numero es mayor que la mitad del chunk*/
 void	order_by_chunks(t_node **list_a, t_node **list_b, int size_chunk)
 {
 	int chunk;
@@ -80,12 +80,12 @@ int	find_biggest_num(t_node **list_b)
 	return(0);
 }
 
-void	if_hundred(t_node **list_a, t_node **list_b)
+void	if_hundred(t_node **list_a, t_node **list_b, int n)
 {
 	int pos;
 	int length;
 
-	order_by_chunks(list_a, list_b, new_length_list(list_a)/5);
+	order_by_chunks(list_a, list_b, new_length_list(list_a)/n);
 	while(*list_b)
 	{
 		pos = find_biggest_num(list_b);
@@ -97,40 +97,10 @@ void	if_hundred(t_node **list_a, t_node **list_b)
 		}
 		while(pos > length && (*list_b)->index != find_max_index(list_b))
 		{
-			if((*list_b)->index == find_max_index(list_b) - 1)
-			{
-				print_push(list_b, list_a, 'a');
-			}
-			print_rr(list_b, 'b');
+			sort_lower_half(list_a, list_b);
 			pos++;
 		}
 		print_push(list_b, list_a, 'a');
-		if((*list_a)->next && (*list_a)->index > (*list_a)->next->index)
-			print_s(list_a, 'a');
+		final_sort(list_a);
 	}
 }
-
-void	if_5hundred(t_node **list_a, t_node **list_b)
-{
-	int pos;
-	int length;
-
-	order_by_chunks(list_a, list_b, new_length_list(list_a)/8);
-	while(*list_b)
-	{
-		pos = find_biggest_num(list_b);
-		length = new_length_list(list_b)/2;
-		while(pos <= length && pos != 0)
-		{
-			sort_upper_half(list_a, list_b);
-			pos--;
-		}
-		while(pos > length && pos != new_length_list(list_b))
-		{
-			print_rr(list_b, 'b');
-			pos++;
-		}
-		print_push(list_b, list_a, 'a');
-	}
-}
-
