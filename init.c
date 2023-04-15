@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static void	put_index(t_node **list, int i)
+void	put_index(t_node **list, int i)
 {
 	t_node	*first;
 	t_node	*moving_to_compare;
@@ -56,4 +56,20 @@ t_node	*create_list(char **av)
 	}
 	put_index(&elem, i);
 	return (elem);
+}
+
+void	free_node(t_node **list)
+{
+	t_node *tmp;
+
+	while(*list != NULL)
+	{
+		tmp = *list;
+		while(tmp != NULL)
+		{
+			free (tmp);
+			tmp = tmp -> next;
+		}
+		*list = NULL;
+	}
 }

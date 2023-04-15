@@ -15,7 +15,7 @@
 //esta funcion me sirve para printear la lista que voy creando, el nodo anterior y el siguiente.
 //Gracias Sebas!!
 
-void print_list(t_node **a, t_node **b)
+/*void print_list(t_node **a, t_node **b)
 {
 	t_node *temp_a;
 	t_node *temp_b;
@@ -50,7 +50,7 @@ void print_list(t_node **a, t_node **b)
 		temp_b = temp_b->prev;
 	}
 	printf("----------------------\n");
-}
+}*/
 
 int	main(int ac, char **av)
 {
@@ -74,8 +74,7 @@ int	main(int ac, char **av)
 			if_hundred(&a, &b, 5);
 		if(ac >= 102)
 			if_hundred(&a, &b, 8);
-		//print_list(&a, &b);
-		//ft_printf("%d\n", is_ordered(&a));
+		free_node(&a);
 	}
 	return(0);
 }

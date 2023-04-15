@@ -23,8 +23,8 @@ void	find_and_move_min(t_node **list_a, t_node **list_b)
 
 	tmp = *list_a;
 	pos = find_position(list_a);
-	half_length = tmp->length_list - pos;
-	times_rr = tmp->length_list - pos;
+	half_length = new_length_list(list_a) - pos;
+	times_rr = new_length_list(list_a) - pos;
 	while(pos > half_length && times_rr != 0)
 	{
 		print_rr(list_a, 'a');

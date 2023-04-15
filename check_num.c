@@ -18,6 +18,8 @@ void	check_num(char *s)
 	int	i;
 
 	i = 0;
+	if(s[0] == '\0')
+		ft_error(1);
 	while (s[i])
 	{
 		if (ft_isdigit(s[i]) || (s[0] == '-' && ft_isdigit(s[i + 1])))

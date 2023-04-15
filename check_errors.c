@@ -16,7 +16,7 @@ void	ft_error(int n)
 {
 	if (n == 1)
 	{
-		write (2, "Error\n", 5);
+		write (2, "Error\n", 6);
 		exit (1);
 	}
 	if (n == 2)

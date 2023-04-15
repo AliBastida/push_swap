@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 #include "libft.h"
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -45,7 +43,9 @@ void	sort_lower_half(t_node **list_a, t_node **list_b);
 void	final_sort(t_node **list_a);
 
 //init.c//
+void	put_index(t_node **list, int i);
 t_node	*create_list(char **av);
+void	free_node(t_node **list);
 
 //movements.c//
 void	ft_swap(t_node **list);

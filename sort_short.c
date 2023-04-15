@@ -85,7 +85,6 @@ void	if_five(t_node **list_a, t_node **list_b)
 		find_and_move_min(list_a, list_b);
 	}
 	if_three(list_a);
-	print_list(list_a, list_b);
 	while(new_length_list(list_b) != 0)
 		print_push(list_b, list_a, 'a');
 }
