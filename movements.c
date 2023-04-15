@@ -14,14 +14,14 @@
 
 void	ft_swap(t_node **list)
 {
-	t_node *first_node;
-	t_node *second_node;
+	t_node	*first_node;
+	t_node	*second_node;
 
 	first_node = *list;
 	second_node = first_node->next;
-	if(!first_node->next)
-		return;
-	if(second_node->next)
+	if (!first_node->next)
+		return ;
+	if (second_node->next)
 	{
 		second_node->next->prev = first_node;
 		first_node->next = second_node->next;
@@ -36,37 +36,37 @@ void	ft_swap(t_node **list)
 
 void	ft_push(t_node **from, t_node **to)
 {
-	t_node *from_first;
-	t_node *to_first;
+	t_node	*from_first;
+	t_node	*to_first;
 
 	from_first = *from;
 	to_first = *to;
-	if(from == NULL)
-		return;
-	if(from_first)
+	if (from == NULL)
+		return ;
+	if (from_first)
 	{
-		if(from_first->next == NULL)
+		if (from_first->next == NULL)
 			*from = NULL;
 		else
 		{
 			from_first->next->prev = NULL;
 			*from = from_first->next;
 		}
-		if(to_first != NULL)
+		if (to_first != NULL)
 			to_first->prev = from_first;
 		from_first->next = to_first;
 		from_first->prev = NULL;
 		*to = from_first;
-	}	
+	}
 }
 
 void	ft_rotate(t_node **list)
 {
-	t_node *first;
-	t_node *last;
+	t_node	*first;
+	t_node	*last;
 
 	first = *list;
-	if(first->next == NULL)
+	if (first->next == NULL)
 		return ;
 	last = ft_last_list(&first);
 	*list = first->next;
@@ -74,13 +74,12 @@ void	ft_rotate(t_node **list)
 	last->next = first;
 	first->next = NULL;
 	first->prev = last;
-
 }
 
 void	ft_rrotate(t_node **list)
 {
-	t_node *first;
-	t_node *last;
+	t_node	*first;
+	t_node	*last;
 
 	first = *list;
 	last = ft_last_list(&first);

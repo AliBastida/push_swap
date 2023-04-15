@@ -14,12 +14,12 @@
 
 void	print_rr(t_node **list, char c)
 {
-	if(c == 'a')
+	if (c == 'a')
 	{
 		ft_rrotate(list);
 		ft_printf("rra\n");
 	}
-	if(c == 'b')
+	if (c == 'b')
 	{
 		ft_rrotate(list);
 		ft_printf("rrb\n");
@@ -32,4 +32,3 @@ void	print_rrotate_both(t_node **list_a, t_node **list_b)
 	ft_rrotate(list_b);
 	ft_printf("rrr\n");
 }
-

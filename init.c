@@ -60,12 +60,12 @@ t_node	*create_list(char **av)
 
 void	free_node(t_node **list)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
-	while(*list != NULL)
+	while (*list != NULL)
 	{
 		tmp = *list;
-		while(tmp != NULL)
+		while (tmp != NULL)
 		{
 			free (tmp);
 			tmp = tmp -> next;
