@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:46:18 by abastida          #+#    #+#             */
-/*   Updated: 2022/05/26 13:46:35 by abastida         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:11:21 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-//	if (n != 0)
-//		ft_memset (s, 0, n);
-		char	*ch;
+	char	*ch;
 	size_t	i;
 
 	ch = s;

@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:57:38 by abastida          #+#    #+#             */
-/*   Updated: 2023/04/12 17:57:38 by abastida         ###   ########.fr       */
+/*   Updated: 2023/04/16 13:52:53 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	order_by_chunks(t_node **list_a, t_node **list_b, int size_chunk)
 	{
 		i = find_index_chunk(list_a, chunk);
 		half_length = new_length_list(list_a) / 2;
-		if (i== -1)
+		if (i == -1)
 		{
 			chunk = chunk + size_chunk;
 			continue ;
@@ -56,7 +56,7 @@ static int	find_index_chunk(t_node **list_a, int chunk)
 	while (tmp)
 	{
 		if (tmp->index <= chunk)
-			return(i);
+			return (i);
 		i++;
 		tmp = tmp->next;
 	}
@@ -66,7 +66,7 @@ static int	find_index_chunk(t_node **list_a, int chunk)
 int	find_biggest_num(t_node **list_b)
 {
 	t_node	*tmp;
-	int	pos;
+	int		pos;
 
 	tmp = *list_b;
 	pos = 0;
@@ -85,11 +85,11 @@ void	if_hundred(t_node **list_a, t_node **list_b, int n)
 	int	pos;
 	int	length;
 
-	order_by_chunks(list_a, list_b, new_length_list(list_a)/n);
+	order_by_chunks(list_a, list_b, new_length_list(list_a) / n);
 	while (*list_b)
 	{
 		pos = find_biggest_num(list_b);
-		length = new_length_list(list_b)/2;
+		length = new_length_list(list_b) / 2;
 		while (pos <= length && pos != 0)
 		{
 			sort_upper_half(list_a, list_b);
