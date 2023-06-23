@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:21:38 by abastida          #+#    #+#             */
-/*   Updated: 2023/04/16 14:14:45 by abastida         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:27:39 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ void	if_five(t_node **list_a, t_node **list_b)
 	while (new_length_list(list_a) > 3)
 		find_and_move_min(list_a, list_b);
 	if_three(list_a);
-	while (new_length_list(list_b) != 0)
+	while (new_length_list(list_b) > 0)
 		print_push(list_b, list_a, 'a');
 }
