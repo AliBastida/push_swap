@@ -20,35 +20,25 @@ void	check_num(char *s)
 	i = 0;
 	if (s[0] == '\0')
 		ft_error(1);
+	if (s[0] == '-' && ft_isdigit(s[i + 1]) == 1)
+		i++;
 	while (s[i])
 	{
-		if (ft_isdigit(s[i]) || (s[0] == '-' && ft_isdigit(s[i + 1])))
+		if (ft_isdigit((s[i])) == 1)
 			i++;
 		else
 			ft_error(1);
 	}
 }
 
-void	check_num_max_min(char **av)
+void	check_num_max_min(char *av)
 {
-	int	i;
-	int	j;
 	int	len;
 
-	i = 1;
-	while (av[i])
-	{
-		j = 0;
-		len = ft_strlen(av[i]);
-		while (av[i][j])
-		{
-			if (len > 11)
-				ft_error(1);
-			else if ((len == 11 && ft_strncmp(av[i], "-2147483648", 11) > 0)
-				|| (len == 10 && ft_strncmp(av[i], "2147483647", 10) > 0))
-				ft_error(1);
-			j++;
-		}	
-		i++;
-	}
+	len = ft_strlen(av);
+	if (len > 11)
+		ft_error(1);
+	else if ((len == 11 && ft_strncmp(av, "-2147483648", 11) > 0)
+		|| (len == 10 && ft_strncmp(av, "2147483647", 10) > 0))
+		ft_error(1);
 }

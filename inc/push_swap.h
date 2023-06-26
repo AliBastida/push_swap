@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:01:07 by abastida          #+#    #+#             */
-/*   Updated: 2023/04/16 14:09:44 by abastida         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:19:29 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	checking_error(char **argv, int argc);
 //check_num.c//
 
 void	check_num(char *s);
-void	check_num_max_min(char **av);
+void	check_num_max_min(char *av);
 
 //sort_big.c//
 

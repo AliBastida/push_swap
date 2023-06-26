@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 			if_three(&a);
 		if (ac > 4 && ac <= 6)
 			if_five(&a, &b);
-		if (ac > 7 && ac <= 101)
+		if (ac >= 7 && ac <= 101)
 			if_hundred(&a, &b, 5);
 		if (ac >= 102)
 			if_hundred(&a, &b, 8);

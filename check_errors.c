@@ -51,12 +51,12 @@ void	check_if_ordered(char **av)
 	int	i;
 
 	i = 1;
-	while ((av[i]) && (ft_atoi(av[i - 1]) < ft_atoi(av[i])))
+	while ((av[i + 1]) && (ft_atoi(av[i]) < ft_atoi(av[i + 1])))
 	{
 		i++;
 	}
-	if (av[i] == NULL)
-		ft_error(1);
+	if (!av[i + 1])
+		ft_error(2);
 }
 
 void	checking_error(char **argv, int argc)
@@ -67,8 +67,8 @@ void	checking_error(char **argv, int argc)
 	while (argv[++i])
 	{
 		check_num(argv[i]);
-		check_num_max_min(argv);
-		check_if_ordered(argv);
+		check_num_max_min(argv[i]);
 	}
 	check_double(argv, argc);
+	check_if_ordered(argv);
 }
